@@ -1,0 +1,20 @@
+class Reverse
+{
+    // Complete the function
+    // str: input string
+    public static String reverseWord(String str)
+    {
+        int l = 0;
+        int r = str.length()-1;
+        StringBuilder sb = new StringBuilder(str);
+        while(l<r){
+            char temp = sb.charAt(l);
+            sb.setCharAt(l, str.charAt(r));
+            sb.setCharAt(r, temp);
+            l++;
+            r--;
+        }
+        return sb.toString();
+        // Reverse the string str
+    }
+}
