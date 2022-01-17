@@ -1,0 +1,21 @@
+class Solution{
+    public static int doUnion(int a[], int n, int b[], int m) 
+    {
+        int count = 0;
+        HashSet<Integer> hm = new HashSet<>();
+        for(int i = 0; i<n; i++)
+        {
+            if(!hm.contains(a[i])){
+                hm.add(a[i]);
+                
+            }
+        }//Your code here
+        for(int j = 0; j<m; j++)
+        {
+            if(!hm.contains(b[j])){
+                hm.add(b[j]);
+            }
+        }
+        return hm.size();
+    }
+}
