@@ -1,0 +1,23 @@
+class Solution {
+    //Tortoise hare floydd cycle algoo!!!
+    public int findDuplicate(int[] nums) {
+        int here = nums[0];
+        int tort = nums[0];
+        
+        do{
+            tort = nums[tort];
+            here = nums[nums[here]];
+            
+        }while(here!=tort);
+        
+        
+        tort = nums[0];
+        
+        while(here!=tort){
+            tort = nums[tort];
+            here = nums[here];
+        }
+        return here;
+        
+    }
+}
